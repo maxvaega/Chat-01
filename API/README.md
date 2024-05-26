@@ -1,4 +1,4 @@
-A. Riepilogo delle API implementate:   
+#A. Riepilogo delle API implementate:   
    
    1 Iniziare una Sessione (/start-session)                                                                                                                 
       • Tipo di richiesta: POST                                                                                                                             
@@ -12,7 +12,11 @@ A. Riepilogo delle API implementate:
 
 
 
-B. Utilizzo di Postman                                                                   
+
+
+
+
+#B. Utilizzo di Postman                                                                   
                                                                                                                                                             
                                                                    Iniziare una Sessione                                                                    
                                                                                                                                                             

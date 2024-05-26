@@ -1,4 +1,4 @@
-#A. Riepilogo delle API implementate:   
+# Riepilogo delle API implementate:   
    
    1 Iniziare una Sessione (/start-session)                                                                                                                 
       • Tipo di richiesta: POST                                                                                                                             
@@ -16,9 +16,9 @@
 
 
 
-#B. Utilizzo di Postman                                                                   
+### per testare con Postman                                                                   
                                                                                                                                                             
-                                                                   Iniziare una Sessione                                                                    
+**Iniziare una Sessione**                                                                    
                                                                                                                                                             
    1 Apri Postman.                                                                                                                                          
    2 Crea una nuova richiesta.                                                                                                                              
@@ -26,7 +26,7 @@
    4 Inserisci l'URL: http://127.0.0.1:5000/start-session.                                                                                                  
    5 Fai clic su Send.                                                                                                                                      
                                                                                                                                                             
-                                                                    Inviare un Messaggio                                                                    
+**Inviare un Messaggio**                                                                    
                                                                                                                                                             
    1 Crea una nuova richiesta.                                                                                                                              
    2 Seleziona POST dal menu a discesa.                                                                                                                     

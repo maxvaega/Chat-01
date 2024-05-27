@@ -16,7 +16,7 @@ def send_message():
     data = request.get_json()
     user_message = data.get("message")
     if interpreter_instance:
-        response = interpreter_instance.interpret(user_message)
+        response = interpreter_instance.chat(user_message)
         return jsonify({"reply": response}), 200
     return jsonify({"error": "Session not started"}), 400
 

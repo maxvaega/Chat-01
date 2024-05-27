@@ -5,20 +5,16 @@ app = Flask(__name__)
 
 interpreter_instance = None
 
-@app.route("/start-session", methods=["POST"])
-def start_session():
-    global interpreter_instance
-    interpreter_instance = OpenInterpreter()
-    return jsonify({"message": "Session started"}), 200
-
 @app.route("/send-message", methods=["POST"])
 def send_message():
+    global interpreter_instance
+    if not interpreter_instance:
+        interpreter_instance = OpenInterpreter()
+    
     data = request.get_json()
     user_message = data.get("message")
-    if interpreter_instance:
-        response = interpreter_instance.chat(user_message)
-        return jsonify({"reply": response}), 200
-    return jsonify({"error": "Session not started"}), 400
+    response = interpreter_instance.chat(user_message)
+    return jsonify({"reply": response}), 200
 
 @app.route("/stream-messages", methods=["GET"])
 def stream_messages():

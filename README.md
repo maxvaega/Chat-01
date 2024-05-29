@@ -1,3 +1,4 @@
-# ChatAPI
+# Chat-01
 
-goto: API
+- API: not actual (use 01 server from Open Interpreter git instead)
+- App: xcode project for native iOS swift

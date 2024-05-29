@@ -1,10 +1,3 @@
-//
-//  ChatView.swift
-//  Chat01
-//
-//  Created by Massimo Olivieri on 29/05/24.
-//
-
 import SwiftUI
 
 struct ChatView: View {
@@ -15,12 +8,37 @@ struct ChatView: View {
     var body: some View {
         VStack {
             ScrollView {
-                ForEach(webSocketManager.messages, id: \.self) { message in
-                    Text(message)
-                        .padding()
-                        .background(Color.gray.opacity(0.2))
-                        .cornerRadius(8)
-                        .padding(.vertical, 2)
+                VStack(alignment: .leading) {
+                    ForEach(webSocketManager.messages.indices, id: \.self) { index in
+                        let message = webSocketManager.messages[index]
+                        if message.starts(with: "You: ") {
+                            HStack {
+                                Spacer()
+                                Text(message.replacingOccurrences(of: "You: ", with: ""))
+                                    .padding()
+                                    .background(Color.blue.opacity(0.2))
+                                    .cornerRadius(8)
+                                    .padding(.vertical, 2)
+                                    .foregroundColor(.white)
+                                    .background(Color.blue)
+                                    .cornerRadius(15)
+                                    .padding(.trailing, 10)
+                            }
+                        } else {
+                            HStack {
+                                Text(message)
+                                    .padding()
+                                    .background(Color.gray.opacity(0.2))
+                                    .cornerRadius(8)
+                                    .padding(.vertical, 2)
+                                    .foregroundColor(.black)
+                                    .background(Color.gray.opacity(0.2))
+                                    .cornerRadius(15)
+                                    .padding(.leading, 10)
+                                Spacer()
+                            }
+                        }
+                    }
                 }
             }
             HStack {

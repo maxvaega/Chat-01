@@ -1,10 +1,3 @@
-//
-//  NetworkManager.swift
-//  Chat01
-//
-//  Created by Massimo Olivieri on 29/05/24.
-//
-
 import Foundation
 
 func sendMessage(_ message: String, to serverAddress: String, completion: @escaping (Result<Void, Error>) -> Void) {

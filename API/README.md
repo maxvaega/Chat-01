@@ -1,3 +1,7 @@
+# ATTENZIONE: le API sviluppate non sono in uso
+
+
+
 # Riepilogo delle API implementate:                                                                                       
    1 Inviare Messaggio (/send-message)                                                                                                                      
       • Tipo di richiesta: POST                                                                                                                             
@@ -12,33 +16,18 @@
 
 
 
-### per testare con Postman                                                                   
+### per testare                                                           
                                                                                                                                                             
-**Iniziare una Sessione**                                                                    
+** POST URL: http://127.0.0.1:5000/start-session **                                                                                                                  
                                                                                                                                                             
-   1 Apri Postman.                                                                                                                                          
-   2 Crea una nuova richiesta.                                                                                                                              
-   3 Seleziona POST dal menu a discesa.                                                                                                                     
-   4 Inserisci l'URL: http://127.0.0.1:5000/start-session.                                                                                                  
-   5 Fai clic su Send.                                                                                                                                      
-                                                                                                                                                            
-**Inviare un Messaggio**                                                                    
-                                                                                                                                                            
-   1 Crea una nuova richiesta.                                                                                                                              
-   2 Seleziona POST dal menu a discesa.                                                                                                                     
-   3 Inserisci l'URL: http://127.0.0.1:5000/send-message.                                                                                                   
-   4 Vai alla scheda Body, seleziona raw e JSON (application/json).                                                                                         
-   5 Inserisci il seguente JSON:                                                                                                                            
-                                                                                                                                                            
-                                                                                                                                                            
+** POST URL: http://127.0.0.1:5000/send-message JSON **                                                                                                                                                            
        {                                                                                                                                                    
            "message": "Ciao, come stai?"                                                                                                                    
        }                                                                                                                                                    
        ```                                                                                                                                                  
-   6. Fai clic su `Send`.                                                                                                                                   
+                                                                                                                                   
                                                                                                                                                             
    #### Stream dei Messaggi                                                                                                                                 
-   1. Crea una nuova richiesta.                                                                                                                             
-   2. Seleziona `GET` dal menu a discesa.                                                                                                                   
-   3. Inserisci l'URL: `http://127.0.0.1:5000/stream-messages`.                                                                                             
-   4. Fai clic su `Send`.                                               
+                                                                                                                            
+** GET URL: `http://127.0.0.1:5000/stream-messages`
+** non funziona
